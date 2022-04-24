@@ -7,4 +7,4 @@ var hello = function(){
 
 ## a problem here
 
-remote seems to have problems
+remote seems to have problems;
