@@ -3,9 +3,52 @@
         <title>Personal Web yans</title>
         <meta charset = "utf-8">
 
+        <script src = "//code.jquery.com/jquery-1.11.3.min.js";></script>
         <script src = "static/app.js"></script>
+
+        <script>
+            $(document).on("ready", function(){
+                $('#test-form').on("submit", function(){
+                    alert("submit!");
+                })
+            })
+        </script>
     </head>
     <body>
+        <a id = "test-link" href = "#0"> Click </a>
+        <script>
+            $("#test-link").on("click", function(){
+                alert("hello!");
+            })
+            off("click");
+        </script>
+
+        <div>
+            <form id="test-form">
+                name: <input name = "name"><br/>
+                password: <input name = "password"><br/>
+                <button type = "submit">submit</button>
+            </form> 
+        </div>
+
+        <div id = "testMouseMoveDiv" style = "display: block; width: 300px; height: 120px; border: 1px solid #ccc;">
+            Move Mouse Here!
+        </div>
+        <div id = "testMouseMoveSpan">
+
+        </div>
+
+        <script>
+            $(function(){
+                $('#testMouseMoveDiv').mousemove(function(e){
+                    $("#testMouseMoveSpan").text('PageX: ' + e.pageX +", pageY: " + e.pageY);   
+                });
+                off("mousemove");
+                off("click");
+            });
+        </script>
+
+
         <div>
             <table border = "1">
                 <tr>
